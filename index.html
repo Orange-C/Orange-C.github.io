@@ -196,6 +196,105 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/15/javascript-ajax/" itemprop="url">
+                  javascript实现Ajax
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-15T20:44:28+08:00" content="2016-03-15">
+              2016-03-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/15/javascript-ajax/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/15/javascript-ajax/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原生javascript实现ajax是一个比较老套但经常出现的面试题，主要是为了筛选掉长期依赖类库编程的前端。对于新手也是个不错的练习。</p>
+<h2 id="Ajax实现步骤"><a href="#Ajax实现步骤" class="headerlink" title="Ajax实现步骤"></a>Ajax实现步骤</h2><h3 id="创建XMLHttpRequest对象"><a href="#创建XMLHttpRequest对象" class="headerlink" title="创建XMLHttpRequest对象"></a>创建XMLHttpRequest对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> XHR;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">    XHR = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.ActiveXObject)&#123;<span class="comment">// IE6</span></span><br><span class="line">    XHR = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/javascript-ajax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/14/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -245,12 +344,13 @@
 
       
         
-          
-            <h2 id="博客上线"><a href="#博客上线" class="headerlink" title="博客上线"></a>博客上线</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello world'</span>); <span class="comment">//Hi</span></span><br></pre></td></tr></table></figure>
-<p>用<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>+gihub搭建了这个博客，主题采用的是<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>。暂时不会变动博客了，静下心好好学基础</p>
-<h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><p>之前用jekyll搭建了博客，花了不少时间改样式，当时心态也不好越改越烦……仔细想想还是自己太过偏执了，总是拘泥于这些小事情并以此为借口偷懒，<del>我这20年的人生简直是用各种方式偷懒。</del><strong>可是人生是拖不得的啊！</strong>总之现在开始要静下心了，大三的专业课都很有意思，前端的技术还有很多要学，不能在磨叽中相信命运了。</p>
-
-          
+          <h2 id="博客上线"><a href="#博客上线" class="headerlink" title="博客上线"></a>博客上线</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello world'</span>); <span class="comment">//Hi</span></span><br></pre></td></tr></table></figure>
+<p>用<a href="https://hexo.io/">Hexo</a>+gihub搭建了这个博客，主题采用的是<a href="http://theme-next.iissnan.com/">NexT</a>。暂时不会变动博客了，静下心好好学基础</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/14/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -314,7 +414,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
