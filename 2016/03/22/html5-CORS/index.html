@@ -41,11 +41,13 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CORS,XMLHttpRequest," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Oraaange's Blog | why so serious?" type="application/atom+xml" />
 
 
 
@@ -65,7 +67,7 @@
 <meta property="og:site_name" content="Oraaange's Blog | why so serious?">
 <meta property="og:description" content="前言前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。
 什么是CORSCORS全称是Cross-Origin Resource Sharing(跨域资源共">
-<meta property="og:updated_time" content="2016-03-22T07:12:20.893Z">
+<meta property="og:updated_time" content="2016-04-13T14:44:16.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈CORS跨域">
 <meta name="twitter:description" content="前言前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。
@@ -150,12 +152,32 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -215,6 +237,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML-CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML&CSS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -253,7 +294,7 @@
 <a id="more"></a>
 <p>可以看出CORS相比于JSONP基本全是优点，以后的跨域请求应该都是用CORS实现。</p>
 <h2 id="创建CORS请求对象"><a href="#创建CORS请求对象" class="headerlink" title="创建CORS请求对象"></a>创建CORS请求对象</h2><p>因为CORS是属于XMLHttpRequest2的一部分，所以主要要做的就是区分出IE8/9和不支持XMLHttpRequest2的浏览器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method, url</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();    </span><br><span class="line">    <span class="keyword">if</span> (<span class="string">'withCredentials'</span> <span class="keyword">in</span> xhr) &#123;    </span><br><span class="line">        <span class="comment">// 支持CORS    </span></span><br><span class="line">        <span class="comment">// 检查XMLHttpRequest对象是否有“withCredentials”属性,withCredentials仅存在于XMLHTTPRequest2对象里    </span></span><br><span class="line">        xhr.open(method, url, <span class="literal">true</span>);    </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.XDomainRequest) &#123;</span><br><span class="line">        <span class="comment">// XDomainRequest仅存在于IE中，是IE用于支持CORS请求的方式    </span></span><br><span class="line">        xhr = <span class="keyword">new</span> XDomainRequest();    </span><br><span class="line">        xhr.open(method, url);    </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;    </span><br><span class="line">        <span class="comment">// 不支持CORS    </span></span><br><span class="line">        xhr = <span class="literal">null</span>;    </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> xhr;    </span><br><span class="line">&#125;    </span><br><span class="line">     </span><br><span class="line"><span class="keyword">var</span> xhr = createCORSRequest(<span class="string">'GET'</span>, url);</span><br><span class="line"><span class="keyword">if</span> (!xhr) &#123;    </span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'CORS not supported'</span>);</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(); <span class="comment">// 发送请求</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method, url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();    </span><br><span class="line">    <span class="keyword">if</span> (<span class="string">'withCredentials'</span> <span class="keyword">in</span> xhr) &#123;    </span><br><span class="line">        <span class="comment">// 支持CORS    </span></span><br><span class="line">        <span class="comment">// 检查XMLHttpRequest对象是否有“withCredentials”属性,withCredentials仅存在于XMLHTTPRequest2对象里    </span></span><br><span class="line">        xhr.open(method, url, <span class="literal">true</span>);    </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.XDomainRequest) &#123;</span><br><span class="line">        <span class="comment">// XDomainRequest仅存在于IE中，是IE用于支持CORS请求的方式    </span></span><br><span class="line">        xhr = <span class="keyword">new</span> XDomainRequest();    </span><br><span class="line">        xhr.open(method, url);    </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;    </span><br><span class="line">        <span class="comment">// 不支持CORS    </span></span><br><span class="line">        xhr = <span class="literal">null</span>;    </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> xhr;    </span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = createCORSRequest(<span class="string">'GET'</span>, url);</span><br><span class="line"><span class="keyword">if</span> (!xhr) &#123;    </span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'CORS not supported'</span>);</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(); <span class="comment">// 发送请求</span></span><br></pre></td></tr></table></figure>
 <h2 id="服务器支持"><a href="#服务器支持" class="headerlink" title="服务器支持"></a>服务器支持</h2><p>服务器端对CORS的支持主要通过设置HTTP头Access-Control-Allow-Origin实现，如果浏览器检测到相应设置，就能允许AJAX跨域请求。<br>HTTP头的设置方法可以参考这个网站<a href="http://enable-cors.org/" target="_blank" rel="external">enable cross-origin resource sharing</a></p>
 <p>在设置时最好限制请求的来源(如下)，这样就可以防止恶意站点对服务器通过XSS攻击</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http://www.some.com</span><br></pre></td></tr></table></figure>
@@ -272,6 +313,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CORS/" rel="tag">#CORS</a>
+          
+            <a href="/tags/XMLHttpRequest/" rel="tag">#XMLHttpRequest</a>
+          
+        </div>
       
 
       
@@ -360,17 +409,38 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">

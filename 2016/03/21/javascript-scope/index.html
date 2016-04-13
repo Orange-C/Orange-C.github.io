@@ -41,11 +41,13 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript,scope," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Oraaange's Blog | why so serious?" type="application/atom+xml" />
 
 
 
@@ -65,7 +67,7 @@ JavaScript中的作用域每一种语言都有作用域的概念，所谓作用�
 <meta property="og:site_name" content="Oraaange's Blog | why so serious?">
 <meta property="og:description" content="前言作用域链，闭包，原型链算是JavaScript中比较有特色的三个知识点。我会分三篇文章讲讲我对于这三个东西的理解。
 JavaScript中的作用域每一种语言都有作用域的概念，所谓作用域就是变量与函数的可用范围，确定了变量与函数的可见性和生命周期。JavaScript中有两种作用域，全局作用域和局部作用域">
-<meta property="og:updated_time" content="2016-03-24T13:01:26.904Z">
+<meta property="og:updated_time" content="2016-04-13T14:44:01.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈JavaScript的作用域链">
 <meta name="twitter:description" content="前言作用域链，闭包，原型链算是JavaScript中比较有特色的三个知识点。我会分三篇文章讲讲我对于这三个东西的理解。
@@ -150,12 +152,32 @@ JavaScript中的作用域每一种语言都有作用域的概念，所谓作用�
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -214,6 +236,25 @@ JavaScript中的作用域每一种语言都有作用域的概念，所谓作用�
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -292,6 +333,14 @@ JavaScript中的作用域每一种语言都有作用域的概念，所谓作用�
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/scope/" rel="tag">#scope</a>
+          
+        </div>
       
 
       
@@ -380,17 +429,38 @@ JavaScript中的作用域每一种语言都有作用域的概念，所谓作用�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">

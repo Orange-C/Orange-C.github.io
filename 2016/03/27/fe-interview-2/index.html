@@ -41,11 +41,13 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="interview," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Oraaange's Blog | why so serious?" type="application/atom+xml" />
 
 
 
@@ -77,7 +79,7 @@
 画布（Canvas） API
 地理位置定位（navigator.geolocation）API
 历史状态管理（更新history对象，pushState等）">
-<meta property="og:updated_time" content="2016-04-13T05:30:02.627Z">
+<meta property="og:updated_time" content="2016-04-13T14:39:22.814Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试复习-2-HTML&CSS">
 <meta name="twitter:description" content="HTML(5)HTML5新特性
@@ -168,12 +170,32 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -232,6 +254,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端面试复习/" itemprop="url" rel="index">
+                    <span itemprop="name">前端面试复习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -324,6 +365,11 @@
 <li>innerHtml 表示标签内部的内容</li>
 <li>outerHtml 表示整个标签的内容，包含标签</li>
 </ul>
+<h3 id="如何优化DOM操作的性能"><a href="#如何优化DOM操作的性能" class="headerlink" title="如何优化DOM操作的性能"></a>如何优化DOM操作的性能</h3><ul>
+<li>避免反复使用DOM查询操作，把结果用变量缓存</li>
+<li>避免大量使用会造成重绘的DOM操作</li>
+<li>尽量使用ID选择器</li>
+</ul>
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="关于事件冒泡和事件捕获？"><a href="#关于事件冒泡和事件捕获？" class="headerlink" title="关于事件冒泡和事件捕获？"></a>关于事件冒泡和事件捕获？</h3><ul>
 <li>事件冒泡指的是事件开始时由最具体的元素接受，然后逐级向上传播到不具体的元素。也可以说是在DOM树中从最底层的子节点一直“冒泡”到最顶层的父节点</li>
 <li>事件捕获与时间冒泡相反，事件开始时由最顶层的节点接受一直向下传播到事件的实际目标</li>
@@ -405,6 +451,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/interview/" rel="tag">#interview</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -417,6 +469,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/10/fe-interview-3/" rel="prev" title="前端面试复习-3-JavaScript">
+                前端面试复习-3-JavaScript <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -488,17 +544,38 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -535,7 +612,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-5"><span class="nav-number">1.</span> <span class="nav-text">HTML(5)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新特性"><span class="nav-number">1.1.</span> <span class="nav-text">HTML5新特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5离线存储技术"><span class="nav-number">1.2.</span> <span class="nav-text">HTML5离线存储技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie和Web-Storage"><span class="nav-number">1.3.</span> <span class="nav-text">Cookie和Web Storage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">2.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取元素的方法"><span class="nav-number">2.1.</span> <span class="nav-text">获取元素的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点类型"><span class="nav-number">2.2.</span> <span class="nav-text">节点类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点操作"><span class="nav-number">2.3.</span> <span class="nav-text">节点操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">3.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于事件冒泡和事件捕获？"><span class="nav-number">3.1.</span> <span class="nav-text">关于事件冒泡和事件捕获？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件绑定的方法？"><span class="nav-number">3.2.</span> <span class="nav-text">事件绑定的方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于事件对象event？"><span class="nav-number">3.3.</span> <span class="nav-text">关于事件对象event？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是事件委托？"><span class="nav-number">3.4.</span> <span class="nav-text">什么是事件委托？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-3"><span class="nav-number">4.</span> <span class="nav-text">CSS(3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS选择器有哪些？"><span class="nav-number">4.1.</span> <span class="nav-text">CSS选择器有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS伪元素有哪些？"><span class="nav-number">4.2.</span> <span class="nav-text">CSS伪元素有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS伪类有哪些？"><span class="nav-number">4.3.</span> <span class="nav-text">CSS伪类有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position属性有哪些？"><span class="nav-number">4.4.</span> <span class="nav-text">position属性有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing属性值有哪些？"><span class="nav-number">4.5.</span> <span class="nav-text">box-sizing属性值有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在JavaScript中更改样式？"><span class="nav-number">4.6.</span> <span class="nav-text">如何在JavaScript中更改样式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谈谈flex？"><span class="nav-number">4.7.</span> <span class="nav-text">谈谈flex？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动的方法？"><span class="nav-number">4.8.</span> <span class="nav-text">清除浮动的方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写一个常见的三列布局？"><span class="nav-number">4.9.</span> <span class="nav-text">写一个常见的三列布局？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-5"><span class="nav-number">1.</span> <span class="nav-text">HTML(5)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新特性"><span class="nav-number">1.1.</span> <span class="nav-text">HTML5新特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5离线存储技术"><span class="nav-number">1.2.</span> <span class="nav-text">HTML5离线存储技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie和Web-Storage"><span class="nav-number">1.3.</span> <span class="nav-text">Cookie和Web Storage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">2.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取元素的方法"><span class="nav-number">2.1.</span> <span class="nav-text">获取元素的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点类型"><span class="nav-number">2.2.</span> <span class="nav-text">节点类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点操作"><span class="nav-number">2.3.</span> <span class="nav-text">节点操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何优化DOM操作的性能"><span class="nav-number">2.4.</span> <span class="nav-text">如何优化DOM操作的性能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">3.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于事件冒泡和事件捕获？"><span class="nav-number">3.1.</span> <span class="nav-text">关于事件冒泡和事件捕获？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件绑定的方法？"><span class="nav-number">3.2.</span> <span class="nav-text">事件绑定的方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于事件对象event？"><span class="nav-number">3.3.</span> <span class="nav-text">关于事件对象event？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是事件委托？"><span class="nav-number">3.4.</span> <span class="nav-text">什么是事件委托？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-3"><span class="nav-number">4.</span> <span class="nav-text">CSS(3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS选择器有哪些？"><span class="nav-number">4.1.</span> <span class="nav-text">CSS选择器有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS伪元素有哪些？"><span class="nav-number">4.2.</span> <span class="nav-text">CSS伪元素有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS伪类有哪些？"><span class="nav-number">4.3.</span> <span class="nav-text">CSS伪类有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position属性有哪些？"><span class="nav-number">4.4.</span> <span class="nav-text">position属性有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing属性值有哪些？"><span class="nav-number">4.5.</span> <span class="nav-text">box-sizing属性值有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在JavaScript中更改样式？"><span class="nav-number">4.6.</span> <span class="nav-text">如何在JavaScript中更改样式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谈谈flex？"><span class="nav-number">4.7.</span> <span class="nav-text">谈谈flex？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动的方法？"><span class="nav-number">4.8.</span> <span class="nav-text">清除浮动的方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写一个常见的三列布局？"><span class="nav-number">4.9.</span> <span class="nav-text">写一个常见的三列布局？</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
