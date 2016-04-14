@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://orange-c.github.io/"/>
-  <updated>2016-04-13T14:39:25.041Z</updated>
+  <updated>2016-04-14T15:53:36.765Z</updated>
   <id>http://orange-c.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>反思自己学习的方法</title>
+    <link href="http://orange-c.github.io/2016/04/14/how-to-learn/"/>
+    <id>http://orange-c.github.io/2016/04/14/how-to-learn/</id>
+    <published>2016-04-14T14:11:34.000Z</published>
+    <updated>2016-04-14T15:53:36.765Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;学而不思则罔，思而不学则殆&quot;&gt;&lt;a href=&quot;#学而不思则罔，思而不学则殆&quot; class=&quot;headerlink&quot; title=&quot;学而不思则罔，思而不学则殆&quot;&gt;&lt;/a&gt;学而不思则罔，思而不学则殆&lt;/h2&gt;&lt;p&gt;这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为&lt;strong&gt;太懒&lt;/strong&gt;而不想去修改。&lt;/li&gt;
+&lt;li&gt;思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层面。就是&lt;strong&gt;太懒&lt;/strong&gt;不想动手自己实现一次不想自己搭建环境试验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由此可见，我所有的问题基本都是&lt;strong&gt;我自己偷懒&lt;/strong&gt;所致，我的代码量还不够大，还需要更多的实践来学习。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;如何驱动自己&quot;&gt;&lt;a href=&quot;#如何驱动自己&quot; class=&quot;headerlink&quot; title=&quot;如何驱动自己&quot;&gt;&lt;/a&gt;如何驱动自己&lt;/h2&gt;&lt;p&gt;学习最需要的就是内驱力，而这个内驱力一般都是由于自身的不足想要提升水平。但是我的问题在于我常常会迷茫于提升的方向，常常看到优秀的同龄人在知识水平和经验已经远超过我会感到非常恐慌开始看各种知识点，然而并没有什么卵用，一会就会忘记然后再次陷入焦虑。唯一能摆脱这个的方案就是写代码，但是焦虑的时候又写不好……死循环？&lt;/p&gt;
+&lt;p&gt;我现在想到的解决方法之一就是把自己的学习任务化，制定一系列的小任务，里面用到新的框架新的语法新的代码结构等等，然后在任务完成之后再思考优化重构的方案，这样的话可以提升代码量同时防止我在枯燥的&lt;del&gt;API背诵&lt;/del&gt;看书过程中跪下。唯一的难点就是任务的制定，一个合适的难度就是我恰好能写出来但是再难一点点我就会跪的那种，这是一个难点，我会考虑参考一些网上的小轮子和小demo之类。&lt;/p&gt;
+&lt;h2 id=&quot;关于前端的一些思考&quot;&gt;&lt;a href=&quot;#关于前端的一些思考&quot; class=&quot;headerlink&quot; title=&quot;关于前端的一些思考&quot;&gt;&lt;/a&gt;关于前端的一些思考&lt;/h2&gt;&lt;p&gt;在前端开发的学习过程中，&lt;strong&gt;时常会陷入变成API monkey的境地&lt;/strong&gt;。因为很多工具都已经有人做好了，我在编码的过程中也许只是对工具API更加熟悉，但是对于工具的目的，工具具体的实现从未思考，这也是网上前端开发者被大部分程序员诟病的地方。这就更加体现了计算机基础的重要性，有一个良好的计算机基础，就能在使用工具时看到更多方面的问题，比如代码的可维护性，项目的结构，概念的东西在实际编码怎么实现，这个API的底层实现又是怎样等等。其实大部分程序员都逃脱不了API monkey这个过程，编程语言本身就是诸多API的集合，不要纠结于学习几门语言，而且语言的学习成本并不高。我们需要的是编程过程中思考过程中积累起来的丰富经验，这才是铸就一个资深工程师的关键步骤。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;学而不思则罔，思而不学则殆&quot;&gt;&lt;a href=&quot;#学而不思则罔，思而不学则殆&quot; class=&quot;headerlink&quot; title=&quot;学而不思则罔，思而不学则殆&quot;&gt;&lt;/a&gt;学而不思则罔，思而不学则殆&lt;/h2&gt;&lt;p&gt;这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为&lt;strong&gt;太懒&lt;/strong&gt;而不想去修改。&lt;/li&gt;
+&lt;li&gt;思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层面。就是&lt;strong&gt;太懒&lt;/strong&gt;不想动手自己实现一次不想自己搭建环境试验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由此可见，我所有的问题基本都是&lt;strong&gt;我自己偷懒&lt;/strong&gt;所致，我的代码量还不够大，还需要更多的实践来学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://orange-c.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>前端面试复习-3-JavaScript</title>
@@ -541,7 +576,7 @@
     <link href="http://orange-c.github.io/2016/03/14/hello-world/"/>
     <id>http://orange-c.github.io/2016/03/14/hello-world/</id>
     <published>2016-03-14T13:07:31.000Z</published>
-    <updated>2016-04-13T14:38:57.410Z</updated>
+    <updated>2016-04-14T14:15:10.009Z</updated>
     
     <content type="html">&lt;h2 id=&quot;博客上线&quot;&gt;&lt;a href=&quot;#博客上线&quot; class=&quot;headerlink&quot; title=&quot;博客上线&quot;&gt;&lt;/a&gt;博客上线&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;hello world&#39;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//Hi&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;用&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;+gihub搭建了这个博客，主题采用的是&lt;a href=&quot;http://theme-next.iissnan.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NexT&lt;/a&gt;。暂时不会变动博客了，静下心好好学基础&lt;/p&gt;
@@ -558,8 +593,6 @@
     
       <category term="随笔" scheme="http://orange-c.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    
-      <category term="Whatever" scheme="http://orange-c.github.io/tags/Whatever/"/>
     
   </entry>
   

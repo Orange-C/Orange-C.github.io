@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CORS,XMLHttpRequest," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -59,19 +59,25 @@
 
 
 
-<meta name="description" content="前言前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。
-什么是CORSCORS全称是Cross-Origin Resource Sharing(跨域资源共">
+<meta name="description" content="学而不思则罔，思而不学则殆这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。
+
+学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为太懒而不想去修改。
+思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈CORS跨域">
-<meta property="og:url" content="http://orange-c.github.io/2016/03/22/html5-CORS/index.html">
+<meta property="og:title" content="反思自己学习的方法">
+<meta property="og:url" content="http://orange-c.github.io/2016/04/14/how-to-learn/index.html">
 <meta property="og:site_name" content="Oraaange's Blog | why so serious?">
-<meta property="og:description" content="前言前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。
-什么是CORSCORS全称是Cross-Origin Resource Sharing(跨域资源共">
-<meta property="og:updated_time" content="2016-04-13T14:44:16.460Z">
+<meta property="og:description" content="学而不思则罔，思而不学则殆这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。
+
+学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为太懒而不想去修改。
+思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层">
+<meta property="og:updated_time" content="2016-04-14T15:53:36.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谈谈CORS跨域">
-<meta name="twitter:description" content="前言前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。
-什么是CORSCORS全称是Cross-Origin Resource Sharing(跨域资源共">
+<meta name="twitter:title" content="反思自己学习的方法">
+<meta name="twitter:description" content="学而不思则罔，思而不学则殆这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。
+
+学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为太懒而不想去修改。
+思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层">
 
 
 
@@ -89,7 +95,7 @@
   };
 </script>
 
-  <title> 谈谈CORS跨域 | Oraaange's Blog | why so serious? </title>
+  <title> 反思自己学习的方法 | Oraaange's Blog | why so serious? </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -219,7 +225,7 @@
             
             
               
-                谈谈CORS跨域
+                反思自己学习的方法
               
             
           </h1>
@@ -231,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-22T14:04:14+08:00" content="2016-03-22">
-              2016-03-22
+            <time itemprop="dateCreated" datetime="2016-04-14T22:11:34+08:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -245,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/HTML-CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML&CSS</span>
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
                   </a>
                 </span>
 
@@ -261,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/22/html5-CORS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/22/html5-CORS/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/how-to-learn/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/how-to-learn/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -284,24 +290,16 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前几天面试的时候被问到了关于跨域请求的问题，我就说用JSONP，iframe这些。面试官姐姐又追问我还有其他的吗，我表示不知道（一脸懵逼），后来告诉还有CORS，这几天就回来研究了下这个，发现是属于XMLHttpRequest2中的一个特性，而且果不其然老IE（IE8/9）是用其他API实现的。</p>
-<h2 id="什么是CORS"><a href="#什么是CORS" class="headerlink" title="什么是CORS"></a>什么是CORS</h2><p>CORS全称是Cross-Origin Resource Sharing(跨域资源共享)，是W3C提出的跨域请求方案，需要服务器端的支持。与JSONP相比，主要有以下几点不同。</p>
+        <h2 id="学而不思则罔，思而不学则殆"><a href="#学而不思则罔，思而不学则殆" class="headerlink" title="学而不思则罔，思而不学则殆"></a>学而不思则罔，思而不学则殆</h2><p>这句古训想必人人都知道，但是能做到的人不多。我在学习的时候也常常陷入这两种情况之一。</p>
 <ul>
-<li>JSONP只能实现GET请求。CORS支持所有类型的HTTP请求</li>
-<li>使用CORS，开发者可以用普通的XMLHttpRequest发起请求和获得数据，相比JSONP有更好的错误处理</li>
-<li>JSONP兼容老的浏览器。不过考虑到IE8/9能够通过XDomainRequest实现CORS请求，所以主流浏览器基本实现CORS。</li>
+<li>学而不思，就是重构不够多。好的代码都是在重构中诞生的，常常完成了任务之后只完成了需求，没有考虑代码的可扩展性，可修改性等等，因为<strong>太懒</strong>而不想去修改。</li>
+<li>思而不学，就是常常陷入一些概念的漩涡。对于一些框架的概念，API的使用场景等等不能透彻理解，对于设计模式、语言新特性等停留在“见过”这个层面。就是<strong>太懒</strong>不想动手自己实现一次不想自己搭建环境试验</li>
 </ul>
+<p>由此可见，我所有的问题基本都是<strong>我自己偷懒</strong>所致，我的代码量还不够大，还需要更多的实践来学习。</p>
 <a id="more"></a>
-<p>可以看出CORS相比于JSONP基本全是优点，以后的跨域请求应该都是用CORS实现。</p>
-<h2 id="创建CORS请求对象"><a href="#创建CORS请求对象" class="headerlink" title="创建CORS请求对象"></a>创建CORS请求对象</h2><p>因为CORS是属于XMLHttpRequest2的一部分，所以主要要做的就是区分出IE8/9和不支持XMLHttpRequest2的浏览器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method, url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();    </span><br><span class="line">    <span class="keyword">if</span> (<span class="string">'withCredentials'</span> <span class="keyword">in</span> xhr) &#123;    </span><br><span class="line">        <span class="comment">// 支持CORS    </span></span><br><span class="line">        <span class="comment">// 检查XMLHttpRequest对象是否有“withCredentials”属性,withCredentials仅存在于XMLHTTPRequest2对象里    </span></span><br><span class="line">        xhr.open(method, url, <span class="literal">true</span>);    </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.XDomainRequest) &#123;</span><br><span class="line">        <span class="comment">// XDomainRequest仅存在于IE中，是IE用于支持CORS请求的方式    </span></span><br><span class="line">        xhr = <span class="keyword">new</span> XDomainRequest();    </span><br><span class="line">        xhr.open(method, url);    </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;    </span><br><span class="line">        <span class="comment">// 不支持CORS    </span></span><br><span class="line">        xhr = <span class="literal">null</span>;    </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> xhr;    </span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = createCORSRequest(<span class="string">'GET'</span>, url);</span><br><span class="line"><span class="keyword">if</span> (!xhr) &#123;    </span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'CORS not supported'</span>);</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(); <span class="comment">// 发送请求</span></span><br></pre></td></tr></table></figure>
-<h2 id="服务器支持"><a href="#服务器支持" class="headerlink" title="服务器支持"></a>服务器支持</h2><p>服务器端对CORS的支持主要通过设置HTTP头Access-Control-Allow-Origin实现，如果浏览器检测到相应设置，就能允许AJAX跨域请求。<br>HTTP头的设置方法可以参考这个网站<a href="http://enable-cors.org/" target="_blank" rel="external">enable cross-origin resource sharing</a></p>
-<p>在设置时最好限制请求的来源(如下)，这样就可以防止恶意站点对服务器通过XSS攻击</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http://www.some.com</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://www.cnblogs.com/yuzhongwusan/p/3677955.html" target="_blank" rel="external">HTML5安全：CORS（跨域资源共享）简介</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html" target="_blank" rel="external">XMLHttpRequest Level 2 使用指南 - 阮一峰的网络日志</a></li>
-</ul>
+<h2 id="如何驱动自己"><a href="#如何驱动自己" class="headerlink" title="如何驱动自己"></a>如何驱动自己</h2><p>学习最需要的就是内驱力，而这个内驱力一般都是由于自身的不足想要提升水平。但是我的问题在于我常常会迷茫于提升的方向，常常看到优秀的同龄人在知识水平和经验已经远超过我会感到非常恐慌开始看各种知识点，然而并没有什么卵用，一会就会忘记然后再次陷入焦虑。唯一能摆脱这个的方案就是写代码，但是焦虑的时候又写不好……死循环？</p>
+<p>我现在想到的解决方法之一就是把自己的学习任务化，制定一系列的小任务，里面用到新的框架新的语法新的代码结构等等，然后在任务完成之后再思考优化重构的方案，这样的话可以提升代码量同时防止我在枯燥的<del>API背诵</del>看书过程中跪下。唯一的难点就是任务的制定，一个合适的难度就是我恰好能写出来但是再难一点点我就会跪的那种，这是一个难点，我会考虑参考一些网上的小轮子和小demo之类。</p>
+<h2 id="关于前端的一些思考"><a href="#关于前端的一些思考" class="headerlink" title="关于前端的一些思考"></a>关于前端的一些思考</h2><p>在前端开发的学习过程中，<strong>时常会陷入变成API monkey的境地</strong>。因为很多工具都已经有人做好了，我在编码的过程中也许只是对工具API更加熟悉，但是对于工具的目的，工具具体的实现从未思考，这也是网上前端开发者被大部分程序员诟病的地方。这就更加体现了计算机基础的重要性，有一个良好的计算机基础，就能在使用工具时看到更多方面的问题，比如代码的可维护性，项目的结构，概念的东西在实际编码怎么实现，这个API的底层实现又是怎样等等。其实大部分程序员都逃脱不了API monkey这个过程，编程语言本身就是诸多API的集合，不要纠结于学习几门语言，而且语言的学习成本并不高。我们需要的是编程过程中思考过程中积累起来的丰富经验，这才是铸就一个资深工程师的关键步骤。</p>
 
       
     </div>
@@ -314,30 +312,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/CORS/" rel="tag">#CORS</a>
-          
-            <a href="/tags/XMLHttpRequest/" rel="tag">#XMLHttpRequest</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/21/javascript-scope/" rel="next" title="谈谈JavaScript的作用域链">
-                <i class="fa fa-chevron-left"></i> 谈谈JavaScript的作用域链
+              <a href="/2016/04/10/fe-interview-3/" rel="next" title="前端面试复习-3-JavaScript">
+                <i class="fa fa-chevron-left"></i> 前端面试复习-3-JavaScript
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/25/fe-interview-1/" rel="prev" title="前端面试复习-1-浏览器和计算机网络等">
-                前端面试复习-1-浏览器和计算机网络等 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -363,8 +349,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/22/html5-CORS/"
-           data-title="谈谈CORS跨域" data-url="http://orange-c.github.io/2016/03/22/html5-CORS/">
+      <div class="ds-thread" data-thread-key="2016/04/14/how-to-learn/"
+           data-title="反思自己学习的方法" data-url="http://orange-c.github.io/2016/04/14/how-to-learn/">
       </div>
     
   </div>
@@ -477,7 +463,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是CORS"><span class="nav-number">2.</span> <span class="nav-text">什么是CORS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建CORS请求对象"><span class="nav-number">3.</span> <span class="nav-text">创建CORS请求对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器支持"><span class="nav-number">4.</span> <span class="nav-text">服务器支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学而不思则罔，思而不学则殆"><span class="nav-number">1.</span> <span class="nav-text">学而不思则罔，思而不学则殆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何驱动自己"><span class="nav-number">2.</span> <span class="nav-text">如何驱动自己</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于前端的一些思考"><span class="nav-number">3.</span> <span class="nav-text">关于前端的一些思考</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
